@@ -8,7 +8,7 @@ const AddTodo = ({ dispatch }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          dispatch({ type: "ADD", payload: {todo:text,id:Date.now()} });
+          dispatch({ type: "ADD", payload: {title:text,id:Date.now()} });
         }}
         id="todo-form"
       >

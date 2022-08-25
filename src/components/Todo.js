@@ -5,7 +5,7 @@ const Todo = (props) => {
   return (
     <div className="todo">
       {" "}
-      <div className="todo- title">{todo.todo}</div>
+      <div className="todo- title">{todo.title}</div>
       <button
         className="todo- delete"
         onClick={() =>
