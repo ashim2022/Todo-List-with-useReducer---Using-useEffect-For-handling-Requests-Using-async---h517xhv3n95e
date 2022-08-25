@@ -1,16 +1,19 @@
 import React, { useReducer } from "react";
 
 const Todo = (props) => {
- 
+  const { todo } = props;
   return (
     <div className="todo">
       {" "}
-      <div className="todo- title"><li >{props.todo}</li>
-      </div>
-      <button className="todo- delete" onClick={() => props.dispatch({ type: "DELETE", payload: props.key1 })}>
+      <div className="todo- title">{todo.todo}</div>
+      <button
+        className="todo- delete"
+        onClick={() =>
+          props.dispatch({ type: "DELETE", payload: { id: todo.id } })
+        }
+      >
         Delete
       </button>
-      
     </div>
   );
 };

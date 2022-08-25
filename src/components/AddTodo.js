@@ -5,26 +5,23 @@ const AddTodo = ({ dispatch }) => {
 
   return (
     <>
-      <input type="text" onChange={(e) => setText(e.target.value)} />
-      <button onClick={() => dispatch({ type: "ADD", payload: text })}>
-        Add
-      </button>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          dispatch({ type: "ADD", payload: {todo:text,id:Date.now()} });
+        }}
+        id="todo-form"
+      >
+        <input
+          type="text"
+          id="todo-input"
+          onChange={(e) => setText(e.target.value)}
+        />
+        <button type="submit">Add</button>
+      </form>
     </>
   );
 };
 
 export { AddTodo };
 
-// import React from "react"
-
-// const AddTodo = ({ dispatch }) => {
-
-
-//     return (
-//         <>
-//         <input value={inputValue} onChange={handleOnChange}/>
-//         </>
-//     )
-// }
-
-// export { AddTodo }
