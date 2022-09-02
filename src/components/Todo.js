@@ -5,9 +5,9 @@ const Todo = (props) => {
   return (
     <div className="todo">
       {" "}
-      <div className="todo- title">{todo.title}</div>
+      <div className="todo-title">{todo.title}</div>
       <button
-        className="todo- delete"
+        className="todo-delete"
         onClick={() =>
           props.dispatch({ type: "DELETE", payload: { id: todo.id } })
         }
