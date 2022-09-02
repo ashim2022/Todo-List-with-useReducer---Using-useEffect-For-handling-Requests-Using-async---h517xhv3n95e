@@ -4,7 +4,7 @@ import "../styles/App.css";
 import { AddTodo } from "./AddTodo";
 import { Todo } from "./Todo";
 const App = () => {
-  const [state, dispatch] = useReducer(todoReducer, { todo: [{title:"text",id:Date.now()}] });
+  const [state, dispatch] = useReducer(todoReducer, { todo: [] });
   console.log(state);
   return (
     <div id="main">
