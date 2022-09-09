@@ -6,14 +6,14 @@ const Todo = (props) => {
     <div className="todo">
       {" "}
       <div className="todo-title">{todo.title}</div>
-      <button
+      <div
         className="todo-delete"
         onClick={() =>
           props.dispatch({ type: "DELETE", payload: { id: todo.id } })
         }
       >
         Delete
-      </button>
+      </div>
     </div>
   );
 };
